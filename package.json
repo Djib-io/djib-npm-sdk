@@ -1,0 +1,31 @@
+{
+    "name": "djib-js-sdk",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite build --watch",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "tweetnacl": "^1.0.3",
+        "tweetnacl-util": "^0.15.1",
+        "typescript": "^4.6.4",
+        "vite": "^3.0.7",
+        "vite-plugin-dts": "^1.4.1"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/main.cjs",
+    "module": "./dist/main.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/main.js",
+            "require": "./dist/main.cjs"
+        }
+    }
+}
